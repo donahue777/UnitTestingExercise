@@ -11,6 +11,12 @@ namespace UnitTestingExercise.Tests
         {
             //Start Step 3 here:
 
+            Calculator calcy = new Calculator();
+
+            int actual = calcy.Add(num1, num2, num3);
+
+            Assert.Equal(expected, actual);
+
             //Arrange
             // create a Calculator object
             
@@ -24,11 +30,17 @@ namespace UnitTestingExercise.Tests
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(11, 7, 4)]//Add test data <-------
         public void SubtractTest(int minuend, int subtrhend, int expected)
         {
             //Start Step 5 here:
 
+            Calculator calcy = new Calculator();
+
+            int actual = calcy.Subtract(minuend, subtrhend);
+
+            Assert.Equal(expected, actual);
+
             //Arrange
 
             //Act
@@ -38,11 +50,17 @@ namespace UnitTestingExercise.Tests
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(7, 8, 56)]//Add test data <-------
         public void MultiplyTest(int num1, int num2, int expected)
         {
             //Start Step 7 here:
 
+            Calculator calcy = new Calculator();
+
+            int actual = calcy.Multiply(num1, num2);
+
+            Assert.Equal(expected, actual);
+
             //Arrange
 
             //Act
@@ -52,9 +70,14 @@ namespace UnitTestingExercise.Tests
         }
 
         [Theory]
-        [InlineData()]//Add test data <-------
+        [InlineData(21, 3, 7)]//Add test data <-------
         public void DivideTest(int num1, int num2, int expected)
         {
+            Calculator calcy = new Calculator();
+
+            int actual = calcy.Divide(num1, num2);
+
+            Assert.Equal(expected, actual);
             //Arrange
 
             //Act
